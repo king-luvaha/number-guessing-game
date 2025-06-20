@@ -54,13 +54,13 @@ def play_game(difficulty, high_scores):
         if guess == secret_number:
             end_time = time.time()
             time_taken = round(end_time - start_time, 2)
-            print(f"\nCongratulations! You guessed the correct number in {attempts} attempts.")
+            print(f"\n 🎉 Congratulations! You guessed the correct number in {attempts} attempts. 🎉")
             print(f"Time taken: {time_taken} seconds")
             
             # Update high score if this is better
             if high_scores[difficulty] == 0 or attempts < high_scores[difficulty]:
                 high_scores[difficulty] = attempts
-                print("🎉 New high score for this difficulty level! 🎉")
+                print("🏆 New high score for this difficulty level! 🏆")
             return True
         
         if attempts < max_attempts:
@@ -70,7 +70,7 @@ def play_game(difficulty, high_scores):
                 print(f"Incorrect! The number is less than {guess}.")
             print(f"Remaining attempts: {remaining_attempts}")
     
-    print(f"\nGame over! You've run out of attempts.")
+    print(f"\n 💀 Game over! You've run out of attempts. 💀")
     print(f"The correct number was {secret_number}.")
     return False
 
