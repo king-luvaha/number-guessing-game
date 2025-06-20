@@ -3,8 +3,8 @@ import time
 from collections import defaultdict
 
 def display_welcome():
-    print("\nWelcome to the Number Guessing Game!")
-    print("I'm thinking of a number between 1 and 100.")
+    print("\033[1;36m\nWelcome to the Number Guessing Game!\033[0m")
+    print("I'm thinking of a number between 1 and 100. 🧠")
     print("\nDifficulty levels:")
     print("1. Easy (10 chances)")
     print("2. Medium (5 chances)")
@@ -39,7 +39,7 @@ def play_game(difficulty, high_scores):
     difficulty_names = {1: "Easy", 2: "Medium", 3: "Hard"}
     
     print(f"\nGreat! You have selected the {difficulty_names[difficulty]} difficulty level.")
-    print(f"You have {max_attempts} chances to guess the correct number.")
+    print(f"You have {max_attempts} chances to guess the correct number ☺️")
     print("Let's start the game!")
     
     secret_number = random.randint(1, 100)
@@ -65,9 +65,9 @@ def play_game(difficulty, high_scores):
         
         if attempts < max_attempts:
             if guess < secret_number:
-                print(f"Incorrect! The number is greater than {guess}.")
+                print(f"Incorrect! ⬆️  The number is greater than {guess}.")
             else:
-                print(f"Incorrect! The number is less than {guess}.")
+                print(f"Incorrect! ⬇️  The number is less than {guess}.")
             print(f"Remaining attempts: {remaining_attempts}")
     
     print(f"\n 💀 Game over! You've run out of attempts. 💀")
@@ -89,7 +89,7 @@ def main():
         
         play_again = input("\nWould you like to play again? (yes/no): ").lower()
         if play_again not in ['y', 'yes']:
-            print("\nThanks for playing! Goodbye!")
+            print("\nThanks for playing! Bye! 👋")
             break
 
 if __name__ == "__main__":
