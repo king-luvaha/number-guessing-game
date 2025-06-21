@@ -14,6 +14,8 @@ A fun command-line number guessing game built with Python. Try to guess the secr
 - 💡 **Smart Hints**: Tells if your guess is higher/lower
 - 🛡️ **Input Validation**: Handles invalid entries gracefully
 
+Project URL: https://roadmap.sh/projects/number-guessing-game
+
 ## 🛠️ Setup & Installation
 
 ### Prerequisites
